@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Enter first number" id="first">
+    <p><input type="text" placeholder="Enter second number" id="second"></p>
+    <p><button id="sum" onclick="sum()">Sum</button></p>
+    <p><button id="avg" onclick="avg()">Average</button></p>
+    <p><input type="text" id="result"></p>
+    <script>
+     function sum() {
+            var numone, numtwo, ans; numone = document.getElementById("first").value; numtwo = document.getElementById("second").value; ans = parseInt(numone) + parseInt(numtwo); document.getElementById("result").value = ans;
+        }
+        
+        function avg() {
+            var numone, numtwo, ans; numone = document.getElementById("first").value; numtwo = document.getElementById("second").value; ans = (parseInt(numone) + parseInt(numtwo)) / 2; document.getElementById("result").value = ans;
+        }
+    </script>
+</body>
+
+</html>

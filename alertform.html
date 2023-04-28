@@ -1,0 +1,67 @@
+
+    <!-- write a javascript program for getting data from user form and form validation. -->
+<html>
+    <head>
+        <title>form validation</title>
+        <script>
+
+            function validate(){
+                if(document.myform.Name.value==""){
+                    alert("please provide your name!");
+                    document.myform.Name.focus();
+                    return false;
+                }
+                if(document.myform.Email.value==""){
+                    alert("please provide your Email!");
+                    document.myform.Email.focus();
+                    return false;
+                }
+                if(document.myform.zipcode.value|| documentmyform.zipcode.value) {
+                (document.myform.zipcode.value.length!=5);
+                    alert("please provide a zipcode  in the format #####");
+                    document.myform.zipcode.focus();
+                    return false;
+                }
+                if(document.myform.country.value=="-1") {
+                    alert("please provide your country!");
+                    document.myform.country.focus();
+                    return false;
+                }
+               
+            }
+        </script>
+        </head>
+        <body>
+            <form action="/cgi-bin/test-cgi" name="myform" onsubmit="return(validate())";>
+            <table cellspacing="2" cellpadding="2" boder="1">
+                <tr>
+                    <td> <align:"right">Name</td>
+                    <td> <input type="text" name="Name"></td>
+                </tr>
+                <tr>
+                    <td> <align:"right">Email</td>
+                    <td> <input type="text" name="Email"></td>
+                </tr>
+                <tr>
+                    <td> <align:"right">zipcode</td>
+                    <td> <input type="text" name="Zip"></td>
+                </tr>
+                <tr>
+                    <td> <align:"right">Country</td>
+                    <td> <select name="Country">
+                        <option value="-1" selected> [choose yours] </option>
+                        <option value="1">USA</option>
+                        <option value="2">UK</option>
+                        <option value="3">INDIA</option>
+                    </select>
+                </td>
+                </tr>
+                <tr>
+                    <td> <align:"right"></td>
+                    <td> <input type="submit" value="submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        </body>
+</html>

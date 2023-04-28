@@ -1,0 +1,29 @@
+<!-- Write a function in javascript to find the cube of a number. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Enter a number" id="first">
+    <p><button onclick="cube()">Cube</button></p>
+    <p><input type="text" id="result"></p>
+    <script>
+        function cube() {
+            var num, ans; 
+            
+            num = document.getElementById("first").value; 
+            ans = parseInt(num) ** 3; 
+            document.getElementById("result").value = ans;
+        }
+    </script>
+</body>
+
+</html>

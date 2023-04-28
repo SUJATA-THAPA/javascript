@@ -1,0 +1,30 @@
+<!-- Write a javascript code to find the largest and smallest number. -->
+
+
+<html>
+<head><title>Document</title></head>
+<body>
+<label for="numbers">Enter numbers</label>
+<input type="text" id="numbers">
+<br>
+<button onclick="findLargestAndSmallest()">Calculate</button>
+<br>
+<p id="result"></p>
+<script>
+function findLargestAndSmallest() {
+let input = document.getElementById("numbers").value;
+let numbers = input.split(",").map(Number);
+let smallest = numbers[0];
+let largest = numbers[0];
+for (let i = 1; i < numbers.length; i++) {
+if (numbers[i] < smallest) {
+smallest = numbers[i];
+}
+if (numbers[i] > largest) {
+largest = numbers[i];
+}}
+let resultElement = document.getElementById("result");
+resultElement.innerHTML = "Smallest: " + smallest + "<br>" + "Largest: " +
+largest;
+}</script>
+</body></html>

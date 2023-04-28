@@ -1,0 +1,59 @@
+<!-- Write a javascript program to make an arithmetic calculator. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<h1><Center> CALCULATOR</Center></h1>
+<input type="text" placeholder="Enter first number" id="firstnum">
+<p><input type="text" placeholder="Enetr second number"
+id="secondnum"></p>
+<p><button id="add" onclick="add()">+</button>
+<button id="sub" onclick="sub()">-</button>
+<button id="mul" onclick="mul()">*</button>
+<button id="div" onclick="div()">/</button></p>
+<p><input type="text" id="ans"></p>
+<p><button onclick="reset()">CLEAR</button></p>
+<script>
+function add(){
+var one,two,sum;
+one=document.getElementById("firstnum").value;
+two=document.getElementById("secondnum").value;
+sum=parseInt(one)+parseInt(two);
+document.getElementById("ans").value=sum;
+}
+function sub(){
+var one,two,sub;
+one=document.getElementById("firstnum").value;
+two=document.getElementById("secondnum").value;
+sub=parseInt(one)-parseInt(two);
+document.getElementById("ans").value=sub;
+}
+function mul(){
+var one,two,mul;
+one=document.getElementById("firstnum").value;
+two=document.getElementById("secondnum").value;
+mul=parseInt(one)*parseInt(two);
+document.getElementById("ans").value=mul;
+}
+function div(){
+var one,two,div;
+one=document.getElementById("firstnum").value;
+two=document.getElementById("secondnum").value;
+div=parseInt(one)/parseInt(two);
+document.getElementById("ans").value=div;
+}
+function reset(){
+document.getElementById("firstnum").value = "";
+document.getElementById("secondnum").value = "";
+document.getElementById("ans").value="";
+}
+</script>
+</body>
+</html>
+
